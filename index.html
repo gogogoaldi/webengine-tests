@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .grid { 
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            grid-gap: 20px;
+            align-items: stretch;
+        }
+        .grid div {
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+            max-width: 100%;
+        }
+        .format {
+           text-align:center;
+        }
+        .format h1 {
+            font-size: 1em;
+        }
+        .format p {
+            font-size: 0.7em;
+        }
+    </style>
+</head>
+<body> 
+<main class="grid">
+<div class="format">
+    <h1>AVI Video</h1>
+    <video width="400" controls>
+        <source src="video/mov_bbb.avi" type="video/x-msvideo">
+        Your browser does not support AVI Video (.avi).
+    </video>
+
+    <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+</div>
+
+<div class="format">
+    <h1>Flash Video</h1>
+    <video width="400" controls>
+        <source src="video/mov_bbb.flv" type="video/x-flv">
+        Your browser does not support Flash Video (.flv).
+    </video>
+
+    <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+</div>
+
+<div class="format">
+    <h1>M4V Video</h1>
+    <video width="400" controls>
+        <source src="video/mov_bbb.m4v" type="video/x-m4v">
+        Your browser does not support M4v Video (.m4v).
+    </video>
+
+    <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+</div>
+
+<div class="format">
+    <h1>Quicktime Video</h1>
+    <video width="400" controls>
+        <source src="video/mov_bbb.mov" type="video/quicktime">
+        Your browser does not support Quicktime Video (.mov).
+    </video>
+
+    <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+</div>
+
+<div class="format">
+    <h1>MP4 Video</h1>
+    <video width="400" controls>
+        <source src="video/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support MP4 Video (.mp4).
+    </video>
+
+    <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+</div>
+
+<div class="format">
+    <h1>MPEG Video</h1>
+    <video width="400" controls>
+        <source src="video/mov_bbb.mpg" type="video/mpeg">
+        Your browser does not support MPEG Video (.mpg).
+    </video>
+
+    <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+</div>
+
+<div class="format">
+    <h1>OGG Video</h1>
+    <video width="400" controls>
+        <source src="video/mov_bbb.ogg" type="video/ogg">
+        Your browser does not support OGG Video (.ogg).
+    </video>
+
+    <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+</div>
+
+<div class="format">
+    <h1>WMV Video</h1>
+    <video width="400" controls>
+        <source src="video/mov_bbb.wmv" type="video/x-ms-wmv">
+        Your browser does not support Evil Empire Video (.wmv).
+    </video>
+
+    <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+</div>
+</main>
+</body> 
+</html>
