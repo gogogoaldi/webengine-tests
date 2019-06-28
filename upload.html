@@ -6,7 +6,14 @@
 
 <form action="manage_uploads.php" method="post" enctype="multipart/form-data">
     <label>Select files to upload:
-      <input name="datei[]" type="file" multiple> 
+      <input name="files[]" type="file" multiple> 
+    </label>  
+    <button>upload</button>
+</form>
+<br />
+<form action="manage_uploads.php" method="post" enctype="multipart/form-data">
+    <label>Select folder to upload:
+      <input name="folder" type="file" webkitdirectory> 
     </label>  
     <button>upload</button>
 </form>
