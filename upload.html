@@ -2,6 +2,30 @@
 <!DOCTYPE html> 
 <html>
 <head>
+    <script src="assets/scripts/FileSaver.js"></script>
+    <script>
+        function do_dl_fs() {
+            let urls = [
+              { download: "/assets/files/one.zip", filename: "one.zip" },
+              { download: "/assets/files/two.zip", filename: "two.zip" },
+              { download: "/assets/files/three.zip", filename: "three.zip" },
+              { download: "/assets/files/four.zip", filename: "four.zip" },
+              { download: "/assets/files/five.zip", filename: "five.zip" },
+              { download: "/assets/files/six.zip", filename: "six.zip" },
+              { download: "/assets/files/seven.zip", filename: "seven.zip" },
+              { download: "/assets/files/eight.zip", filename: "eight.zip" },
+              { download: "/assets/files/nine.zip", filename: "nine.zip" },
+              { download: "/assets/files/ten.zip", filename: "ten.zip" },
+            ];
+            urls.forEach(function (e) {
+                fetch(e.download)
+                  .then(res => res.blob()) // Gets the response and returns it as a blob
+                  .then(blob => {
+                    saveAs(blob, e.filename);
+                });
+            });
+        };
+    </script>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -25,5 +49,6 @@
 </form>
 
 <p>Or <a href="video/mov_bbb.avi" download="mov_bbb.avi">Download a file</a></p>
+<p>Or <button onclick="do_dl_fs();">Download multiple files</button></p>
 </body>
 </html>
