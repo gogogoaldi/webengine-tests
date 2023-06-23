@@ -4,7 +4,7 @@
 <head>
     <script src="assets/scripts/FileSaver.js"></script>
     <script>
-        function do_dl_fs() {
+        function do_dl_fs_10() {
             let urls = [
               { download: "/assets/files/one.zip", filename: "one.zip" },
               { download: "/assets/files/two.zip", filename: "two.zip" },
@@ -16,6 +16,37 @@
               { download: "/assets/files/eight.zip", filename: "eight.zip" },
               { download: "/assets/files/nine.zip", filename: "nine.zip" },
               { download: "/assets/files/ten.zip", filename: "ten.zip" },
+            ];
+            urls.forEach(function (e) {
+                fetch(e.download)
+                  .then(res => res.blob()) // Gets the response and returns it as a blob
+                  .then(blob => {
+                    saveAs(blob, e.filename);
+                });
+            });
+        };
+        function do_dl_fs_20() {
+            let urls = [
+              { download: "/assets/files/one.zip", filename: "one.zip" },
+              { download: "/assets/files/two.zip", filename: "two.zip" },
+              { download: "/assets/files/three.zip", filename: "three.zip" },
+              { download: "/assets/files/four.zip", filename: "four.zip" },
+              { download: "/assets/files/five.zip", filename: "five.zip" },
+              { download: "/assets/files/six.zip", filename: "six.zip" },
+              { download: "/assets/files/seven.zip", filename: "seven.zip" },
+              { download: "/assets/files/eight.zip", filename: "eight.zip" },
+              { download: "/assets/files/nine.zip", filename: "nine.zip" },
+              { download: "/assets/files/ten.zip", filename: "ten.zip" },
+              { download: "/assets/files/eleven.zip", filename: "eleven.zip" },
+              { download: "/assets/files/twelve.zip", filename: "twelve.zip" },
+              { download: "/assets/files/thirteen.zip", filename: "thirteen.zip" },
+              { download: "/assets/files/fourteen.zip", filename: "fourteen.zip" },
+              { download: "/assets/files/fifteen.zip", filename: "fifteen.zip" },
+              { download: "/assets/files/sixteen.zip", filename: "sixteen.zip" },
+              { download: "/assets/files/seventeen.zip", filename: "seventeen.zip" },
+              { download: "/assets/files/eighteen.zip", filename: "eighteen.zip" },
+              { download: "/assets/files/nineteen.zip", filename: "nineteen.zip" },
+              { download: "/assets/files/twenty.zip", filename: "twenty.zip" },
             ];
             urls.forEach(function (e) {
                 fetch(e.download)
@@ -49,6 +80,7 @@
 </form>
 
 <p>Or <a href="video/mov_bbb.avi" download="mov_bbb.avi">Download a file</a></p>
-<p>Or <button onclick="do_dl_fs();">Download multiple files</button></p>
+<p>Or <button onclick="do_dl_fs_10();">Download 10 files</button></p>
+<p>Or <button onclick="do_dl_fs_20();">Download 20 files</button></p>
 </body>
 </html>
