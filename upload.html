@@ -4,6 +4,22 @@
 <head>
     <script src="assets/scripts/FileSaver.js"></script>
     <script>
+        function do_dl_fs_5() {
+            let urls = [
+              { download: "/assets/files/one.bin", filename: "one.bin" },
+              { download: "/assets/files/two.bin", filename: "two.bin" },
+              { download: "/assets/files/three.bin", filename: "three.bin" },
+              { download: "/assets/files/four.bin", filename: "four.bin" },
+              { download: "/assets/files/five.bin", filename: "five.bin" },
+            ];
+            urls.forEach(function (e) {
+                fetch(e.download)
+                  .then(res => res.blob()) // Gets the response and returns it as a blob
+                  .then(blob => {
+                    saveAs(blob, e.filename);
+                });
+            });
+        };
         function do_dl_fs_10() {
             let urls = [
               { download: "/assets/files/one.bin", filename: "one.bin" },
@@ -80,6 +96,7 @@
 </form>
 
 <p>Or <a href="video/mov_bbb.avi" download="mov_bbb.avi">Download a file</a></p>
+<p>Or <button onclick="do_dl_fs_10();">Download 5 files</button></p>
 <p>Or <button onclick="do_dl_fs_10();">Download 10 files</button></p>
 <p>Or <button onclick="do_dl_fs_20();">Download 20 files</button></p>
 </body>
